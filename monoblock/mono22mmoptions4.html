@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<script src="refresh.js"></script>
+<script>
+       $(document).ready(function() {
+    $('.btn-common').on('click', function() {
+        
+        var parent = $(this).closest('.option-group');
+       
+      
+
+       
+        var allButtons = parent.siblings().find('.btn-common');
+
+      
+        allButtons.toggle();
+        
+     
+        var nestedOptions = $(this).next();
+        nestedOptions.toggle(); 
+
+      
+        $(this).show();
+
+      
+    });});
+
+    document.querySelectorAll('.whitebtn').forEach(button => {
+    button.addEventListener('click', function () {
+        // Select all forms with the class 'flushform' and reset their inputs
+
+
+        
+       
+        document.getElementById('whitece').classList.add('hidden');
+        document.getElementById('blackce').classList.add('hidden');
+        // document.getElementById('greence').classList.add('hidden');
+        document.getElementById('plusSymbol').classList.add('hidden');
+        document.getElementById('plusSymbol2').classList.add('hidden');
+        document.getElementById('no-1').classList.add('hidden');
+        document.getElementById('nc-1').classList.add('hidden');
+
+        
+
+     
+
+    });
+});
+  </script>
+<style>
+    .outputflex{
+        display: flex;
+    }
+    .output{
+        margin-top: -100px;
+        margin-left: 500px;
+    }
+    .imagecon {
+        position: relative;
+        display: flex;
+        
+    }
+
+    .plus-symbol {
+      
+        font-size: 40px;
+        font-weight: bold;
+     
+        display: none; /* Initially hidden */
+        z-index: 10;
+    }
+     .imagecon img{
+        width: 150px;
+     }
+</style>
+<body>
+    <div class="outputflex">
+
+        <div class="clipop">
+            <div class="option-group">
+                <button class="option-btn btn-common flush whitebtn">Selector Pushbutton 2 Position</button>
+                <div class="nested-options">
+                 
+                          <!-- 2 colour -->
+                    <div class="option-group">
+                        <button class="option-btn btn-common whitebtn secondthoptioneone"><div class="black-btn"></div>(P2AF2)</button>
+                        
+                                
+                        <div class="nested-options">
+                            <!-- Silver Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn secondthoptioneone" gdata-colorca="blackcea" code-colora="no-1a" noimga="1" gdata-codeca="3PSS210-2P">1NO</button>
+                                
+                            </div>
+                            <!-- Gold Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn secondthoptioneone" gdata-colorca="blackcea" code-colora="nc-1a" noimga="1" gdata-codeca="3PSS201-2P">1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn secondthoptioneone" gdata-colorca="blackcea" code-colora="no-1a" noimga="1" code-color2a="nc-1a" gdata-codeca="3PSS211-2P">1NO+1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common secondthoptioneone" gdata-colorca="blackcea" code-colora="no-1a" noimga="2" gdata-codeca="3PSS220-2P">2NO</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common secondthoptioneone" gdata-colorca="blackcea" code-colora="nc-1a" noimga="2" gdata-codeca="3PSS202-2P">2NC</button> 
+                          
+                            </div>
+                        </div>
+                            </div>
+                            
+                        
+            
+                            
+                        </div>
+            </div>
+            <div class="option-group">
+                <button class="option-btn btn-common flush whitebtn ">Selector Pushbutton 3 Position</button>
+                <div class="nested-options">
+                 
+                          <!-- 2 colour -->
+                    <div class="option-group">
+                        <button class="option-btn btn-common whitebtn secondthoptionetwo"><div class="black-btn"></div>(P2AF2)</button>
+                        
+                                
+                        <div class="nested-options">
+                       
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn secondthoptionetwo" gdata-colorcaw="blackceaw" code-coloraw="no-1aw" noimgaw="1" code-color2aw="nc-1aw" gdata-codecaw="3PSS211-3P">1NO+1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common secondthoptionetwo" gdata-colorcaw="blackceaw" code-coloraw="no-1aw" noimgaw="2" gdata-codecaw="3PSS220-3P">2NO</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common secondthoptionetwo" gdata-colorcaw="blackceaw" code-coloraw="nc-1aw" noimgaw="2" gdata-codecaw="3PSS202-3P">2NC</button> 
+                          
+                            </div>
+                        </div>
+                            </div>
+                            
+                        
+            
+                            
+                        </div>
+            </div>
+
+            </div>
+        
+
+        <div class="output">
+
+            <!-- Result display section -->
+         <!-- Result display section -->
+         <div id="resultc" class="result hidden">
+          
+             <p id="generated-codec"></p>
+             <div id="description" class="description hidden">
+                 <h2 id="description-title"></h2>
+             </div>
+         </div>
+    
+
+<div class="imagecon">
+    <div class="sevenhimga">
+
+        <img src="pilotlights/flush/white.png" id="whitecea" class="hidden" alt="White">
+        <img src="pilotlights/flush/black.png" id="blackcea" class="hidden" alt="Black">
+        <img src="pilotlights/flush/green.png" id="greencea" class="hidden" alt="Green">
+        <img src="pilotlights/flush/red.png" id="redcea" class="hidden" alt="Red">
+        <img src="pilotlights/flush/blue.png" id="bluecea" class="hidden" alt="Blue">
+        <img src="pilotlights/flush/yellow.png" id="yellowcea" class="hidden" alt="Yellow">
+        
+    </div>
+    <div id="plusSymbola" class="plus-symbol" style="display: none;">+</div>
+    
+        <div class="sevencodea" style="display: flex;">
+            <div class="image-container" >
+                <img src="monoblock/no-1.png" id="no-1a" class="hidden" alt="White">
+                <div class="image-name" id="onelablea" style="display: none;">S1</div>
+            </div>
+   
+            <div id="plusSymbol2a" class="plus-symbol" style="display: none;">+</div>
+
+            <div class="image-container" >
+                <img src="monoblock/nc-1.png" id="nc-1a" class="hidden" alt="Black">
+                <div class="image-name" id="twolablea" style="display: none;">S2</div>
+            </div>
+       
+        
+          
+        </div>
+    </div>
+
+
+<script>
+    document.querySelectorAll('.secondthoptioneone').forEach(button => {
+   button.addEventListener('click', function () {
+       const color = this.getAttribute('gdata-colorca');
+       const codeclr = this.getAttribute('code-colora');
+       const codeclr2 = this.getAttribute('code-color2a');
+       const productCode = this.getAttribute('gdata-codeca');
+       const noimage = this.getAttribute('noimga');
+
+       // Hide all images initially
+       document.querySelectorAll('.sevenhimga img, .sevencodea img').forEach(img => img.classList.add('hidden'));
+       document.getElementById('plusSymbola').style.display = "none";
+       document.getElementById('plusSymbol2a').style.display = "none";
+
+       // Hide all labels initially
+       document.getElementById('onelablea').style.display = "none";
+       document.getElementById('twolablea').style.display = "none";
+
+       // Show the primary color image
+       const selectedImage = document.getElementById(color);
+       if (selectedImage) {
+           selectedImage.classList.remove('hidden');
+       }
+
+       // Show the first code image and update label with noimage attribute
+       const selectedCodeImage = document.getElementById(codeclr);
+       if (selectedCodeImage) {
+           selectedCodeImage.classList.remove('hidden');
+           document.getElementById('plusSymbola').style.display = "block";
+
+           if (codeclr === "no-1a") {
+               document.getElementById('onelablea').style.display = "block";
+               document.getElementById('onelablea').textContent = `S1${noimage ? '*' + noimage : ''}`;
+               document.getElementById('twolablea').style.display = "none";
+           }
+
+           if (codeclr === "nc-1a") {
+               document.getElementById('twolablea').style.display = "block";
+               document.getElementById('twolablea').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               document.getElementById('onelablea').style.display = "none";
+           }
+       }
+
+       // Show the second code image if present
+       if (codeclr2) {
+           const selectedCodeImage2 = document.getElementById(codeclr2);
+           if (selectedCodeImage2) {
+               selectedCodeImage2.classList.remove('hidden');
+               document.getElementById('plusSymbol2a').style.display = "block";
+
+               if (codeclr2 === "nc-1a") {
+                   document.getElementById('twolablea').style.display = "block";
+                   document.getElementById('twolablea').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               }
+           }
+       }
+
+       // Display the product code
+       const productInfo = document.getElementById('generated-codec');
+       productInfo.textContent = "Product Code: " + productCode;
+       document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+   });
+});
+
+           </script>
+
+
+<div class="imagecon">
+    <div class="sevenhimgaw">
+
+        <img src="pilotlights/flush/white.png" id="whiteceaw" class="hidden" alt="White">
+        <img src="pilotlights/flush/black.png" id="blackceaw" class="hidden" alt="Black">
+        <img src="pilotlights/flush/green.png" id="greenceaw" class="hidden" alt="Green">
+        <img src="pilotlights/flush/red.png" id="redceaw" class="hidden" alt="Red">
+        <img src="pilotlights/flush/blue.png" id="blueceaw" class="hidden" alt="Blue">
+        <img src="pilotlights/flush/yellow.png" id="yellowceaw" class="hidden" alt="Yellow">
+        
+    </div>
+    <div id="plusSymbolaw" class="plus-symbol" style="display: none;">+</div>
+    
+        <div class="sevencodeaw" style="display: flex;">
+            <div class="image-container" >
+                <img src="monoblock/no-1.png" id="no-1aw" class="hidden" alt="White">
+                <div class="image-name" id="onelableaw" style="display: none;">S1</div>
+            </div>
+   
+            <div id="plusSymbol2aw" class="plus-symbol" style="display: none;">+</div>
+
+            <div class="image-container" >
+                <img src="monoblock/nc-1.png" id="nc-1aw" class="hidden" alt="Black">
+                <div class="image-name" id="twolableaw" style="display: none;">S2</div>
+            </div>
+       
+        
+          
+        </div>
+    </div>
+
+
+<script>
+    document.querySelectorAll('.secondthoptionetwo').forEach(button => {
+   button.addEventListener('click', function () {
+       const color = this.getAttribute('gdata-colorcaw');
+       const codeclr = this.getAttribute('code-coloraw');
+       const codeclr2 = this.getAttribute('code-color2aw');
+       const productCode = this.getAttribute('gdata-codecaw');
+       const noimage = this.getAttribute('noimgaw');
+
+       // Hide all images initially
+       document.querySelectorAll('.sevenhimgaw img, .sevencodeaw img').forEach(img => img.classList.add('hidden'));
+       document.getElementById('plusSymbolaw').style.display = "none";
+       document.getElementById('plusSymbol2aw').style.display = "none";
+
+       // Hide all labels initially
+       document.getElementById('onelableaw').style.display = "none";
+       document.getElementById('twolableaw').style.display = "none";
+
+       // Show the primary color image
+       const selectedImage = document.getElementById(color);
+       if (selectedImage) {
+           selectedImage.classList.remove('hidden');
+       }
+
+       // Show the first code image and update label with noimage attribute
+       const selectedCodeImage = document.getElementById(codeclr);
+       if (selectedCodeImage) {
+           selectedCodeImage.classList.remove('hidden');
+           document.getElementById('plusSymbolaw').style.display = "block";
+
+           if (codeclr === "no-1aw") {
+               document.getElementById('onelableaw').style.display = "block";
+               document.getElementById('onelableaw').textContent = `S1${noimage ? '*' + noimage : ''}`;
+               document.getElementById('twolableaw').style.display = "none";
+           }
+
+           if (codeclr === "nc-1aw") {
+               document.getElementById('twolableaw').style.display = "block";
+               document.getElementById('twolableaw').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               document.getElementById('onelableaw').style.display = "none";
+           }
+       }
+
+       // Show the second code image if present
+       if (codeclr2) {
+           const selectedCodeImage2 = document.getElementById(codeclr2);
+           if (selectedCodeImage2) {
+               selectedCodeImage2.classList.remove('hidden');
+               document.getElementById('plusSymbol2aw').style.display = "block";
+
+               if (codeclr2 === "nc-1aw") {
+                   document.getElementById('twolableaw').style.display = "block";
+                   document.getElementById('twolableaw').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               }
+           }
+       }
+
+       // Display the product code
+       const productInfo = document.getElementById('generated-codec');
+       productInfo.textContent = "Product Code: " + productCode;
+       document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+   });
+});
+
+           </script>
+
+
+
+
+         </div>
+         
+        </div>
+        
+</body>
+</html>

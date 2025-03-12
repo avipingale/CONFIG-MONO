@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<script src="refresh.js"></script>
+<script>
+       $(document).ready(function() {
+    $('.btn-common').on('click', function() {
+        
+        var parent = $(this).closest('.option-group');
+       
+      
+
+       
+        var allButtons = parent.siblings().find('.btn-common');
+
+      
+        allButtons.toggle();
+        
+     
+        var nestedOptions = $(this).next();
+        nestedOptions.toggle(); 
+
+      
+        $(this).show();
+
+      
+    });});
+
+    document.querySelectorAll('.whitebtn').forEach(button => {
+    button.addEventListener('click', function () {
+        // Select all forms with the class 'flushform' and reset their inputs
+
+
+        
+       
+        document.getElementById('whitece').classList.add('hidden');
+        document.getElementById('blackce').classList.add('hidden');
+        // document.getElementById('greence').classList.add('hidden');
+        document.getElementById('plusSymbol').classList.add('hidden');
+        document.getElementById('plusSymbol2').classList.add('hidden');
+        document.getElementById('no-1').classList.add('hidden');
+        document.getElementById('nc-1').classList.add('hidden');
+
+        
+
+     
+
+    });
+});
+  </script>
+<style>
+    .outputflex{
+        display: flex;
+    }
+    .output{
+        margin-top: -100px;
+        margin-left: 500px;
+    }
+    .imagecon {
+        position: relative;
+        display: flex;
+        
+    }
+
+    .plus-symbol {
+      
+        font-size: 40px;
+        font-weight: bold;
+     
+        display: none; /* Initially hidden */
+        z-index: 10;
+    }
+     .imagecon img{
+        width: 150px;
+     }
+</style>
+<body>
+    <div class="outputflex">
+
+        <div class="clipop">
+            <div class="option-group">
+                <button class="option-btn btn-common flush whitebtn">Flush push</button>
+                <div class="nested-options">
+                    <!-- 1st colour -->
+                    <div class="option-group">
+                        <button class="option-btn btn-common flush whitebtn seventhoptione">
+                            <div class="white-btn"></div>(P2AF1)
+                        </button>
+                       
+                                <div class="nested-options">
+                                    <!-- Silver Contact Button -->
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common whitebtn seventhoptione" gdata-colorc="whitece" code-color="no-1" noimg="1" gdata-codec="3PSF110">1NO</button>
+                                        
+                                    </div>
+                                    <!-- Gold Contact Button -->
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common whitebtn seventhoptione" gdata-colorc="whitece" code-color="nc-1" noimg="1" gdata-codec="3PSF101">1NC</button> 
+                                  
+                                    </div>
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common whitebtn seventhoptione" gdata-colorc="whitece" code-color="no-1" noimg="1" code-color2="nc-1" gdata-codec="3PSF111">1NO+1NC</button> 
+                                  
+                                    </div>
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common seventhoptione" gdata-colorc="whitece" code-color="no-1" noimg="2" gdata-codec="3PSF120">2NO</button> 
+                                  
+                                    </div>
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common seventhoptione" gdata-colorc="whitece" code-color="nc-1" noimg="2" gdata-codec="3PSF102">2NC</button> 
+                                  
+                                    </div>
+                                </div>
+                            </div>
+                           
+                     
+                    
+                          <!-- 2 colour -->
+                    <div class="option-group">
+                        <button class="option-btn btn-common whitebtn secondthoptione"><div class="black-btn"></div>(P2AF2)</button>
+                        
+                                
+                        <div class="nested-options">
+                            <!-- Silver Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn secondthoptione" gdata-colorca="blackcea" code-colora="no-1a" noimga="1" gdata-codeca="3PSF210">1NO</button>
+                                
+                            </div>
+                            <!-- Gold Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn secondthoptione" gdata-colorca="blackcea" code-colora="nc-1a" noimga="1" gdata-codeca="3PSF201">1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn secondthoptione" gdata-colorca="blackcea" code-colora="no-1a" noimga="1" code-color2a="nc-1a" gdata-codeca="3PSF211">1NO+1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common secondthoptione" gdata-colorca="blackcea" code-colora="no-1a" noimga="2" gdata-codeca="3PSF220">2NO</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common secondthoptione" gdata-colorca="blackcea" code-colora="nc-1a" noimga="2" gdata-codeca="3PSF202">2NC</button> 
+                          
+                            </div>
+                        </div>
+                            </div>
+                            
+                        
+                    <div class="option-group">
+                        <button class="option-btn btn-common whitebtn thirdthoptione"><div class="green-btn"></div>(P2AF3)</button>
+                        
+                        <div class="nested-options">
+                            <!-- Silver Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn thirdthoptione" gdata-colorcab="greenceab" code-colorab="no-1ab" noimgab="1" gdata-codecab="3PSF310">1NO</button>
+                                
+                            </div>
+                            <!-- Gold Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn thirdthoptione" gdata-colorcab="greenceab" code-colorab="nc-1ab" noimgab="1" gdata-codecab="3PSF301">1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn thirdthoptione" gdata-colorcab="greenceab" code-colorab="no-1ab" noimgab="1" code-color2ab="nc-1ab" gdata-codecab="3PSF311">1NO+1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common thirdthoptione" gdata-colorcab="greenceab" code-colorab="no-1ab" noimgab="2" gdata-codecab="3PSF320">2NO</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common thirdthoptione" gdata-colorcab="greenceab" code-colorab="nc-1ab" noimgab="2" gdata-codecab="3PSF302">2NC</button> 
+                          
+                            </div>
+                        </div>
+                            </div>  
+
+                            
+                                   
+                             
+                          
+                        
+
+                    <div class="option-group">
+                        <button class="option-btn btn-common whitebtn fourththoptione"><div class="red-btn"></div>(P2AF4)</button>
+                      
+
+                        <div class="nested-options">
+                            <!-- Silver Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn fourththoptione" gdata-colorcabc="redceabc" code-colorabc="no-1abc" noimgabc="1" gdata-codecabc="3PSF410">1NO</button>
+                                
+                            </div>
+                            <!-- Gold Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn fourththoptione" gdata-colorcabc="redceabc" code-colorabc="nc-1abc" noimgabc="1" gdata-codecabc="3PSF401">1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn fourththoptione" gdata-colorcabc="redceabc" code-colorabc="no-1abc" noimgabc="1" code-color2abc="nc-1abc" gdata-codecabc="3PSF411">1NO+1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common fourththoptione" gdata-colorcabc="redceabc" code-colorabc="no-1abc" noimgabc="2" gdata-codecabc="3PSF420">2NO</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common fourththoptione" gdata-colorcabc="redceabc" code-colorabc="nc-1abc" noimgabc="2" gdata-codecabc="3PSF402">2NC</button> 
+                          
+                            </div>
+                        </div>
+                        </div>
+                          
+                      
+
+
+                    <div class="option-group">
+                        <button class="option-btn btn-common whitebtn fithoptione"><div class="blue-btn"></div>(P2AF6)</button>
+                       
+                                
+                        <div class="nested-options">
+                            <!-- Silver Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn fithoptione" gdata-colorcabcd="blueceabcd" code-colorabcd="no-1abcd" noimgabcd="1" gdata-codecabcd="3PSF510">1NO</button>
+                                
+                            </div>
+                            <!-- Gold Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn fithoptione" gdata-colorcabcd="blueceabcd" code-colorabcd="nc-1abcd" noimgabcd="1" gdata-codecabcd="3PSF501">1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn fithoptione" gdata-colorcabcd="blueceabcd" code-colorabcd="no-1abcd" noimgabcd="1" code-color2abcd="nc-1abcd" gdata-codecabcd="3PSF511">1NO+1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common fithoptione" gdata-colorcabcd="blueceabcd" code-colorabcd="no-1abcd" noimgabcd="2" gdata-codecabcd="3PSF520">2NO</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common fithoptione" gdata-colorcabcd="blueceabcd" code-colorabcd="nc-1abcd" noimgabcd="2" gdata-codecabcd="3PSF502">2NC</button> 
+                          
+                            </div>
+                        </div>
+                                
+                        </div>
+
+                          
+
+
+
+                    <div class="option-group">
+                        <button class="option-btn btn-common whitebtn sixthoptione"><div class="yellow-btn"></div>(P2AF8)</button>
+                        
+
+                        <div class="nested-options">
+                            <!-- Silver Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn sixthoptione" gdata-colorcabcde="yellowceabcde" code-colorabcde="no-1abcde" noimgabcde="1" gdata-codecabcde="3PSF610">1NO</button>
+                                
+                            </div>
+                            <!-- Gold Contact Button -->
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn sixthoptione" gdata-colorcabcde="yellowceabcde" code-colorabcde="nc-1abcde" noimgabcde="1" gdata-codecabcde="3PSF601">1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common whitebtn sixthoptione" gdata-colorcabcde="yellowceabcde" code-colorabcde="no-1abcde" noimgabcde="1" code-color2abcde="nc-1abcde" gdata-codecabcde="3PSF611">1NO+1NC</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common sixthoptione" gdata-colorcabcde="yellowceabcde" code-colorabcde="no-1abcde" noimgabcde="2" gdata-codecabcde="3PSF620">2NO</button> 
+                          
+                            </div>
+                            <div class="option-group">
+                                <button class="option-btn btn-common sixthoptione" gdata-colorcabcde="yellowceabcde" code-colorabcde="nc-1abcde" noimgabcde="2" gdata-codecabcde="3PSF602">2NC</button> 
+                          
+                            </div>
+                        </div>
+
+                            </div>
+                            
+                        </div>
+            </div>
+         
+
+            </div>
+        
+
+        <div class="output">
+
+            <!-- Result display section -->
+         <!-- Result display section -->
+         <div id="resultc" class="result hidden">
+          
+             <p id="generated-codec"></p>
+             <div id="description" class="description hidden">
+                 <h2 id="description-title"></h2>
+             </div>
+         </div>
+        <div class="imagecon">
+        <div class="sevenhimg">
+
+            <img src="pilotlights/flush/white.png" id="whitece" class="hidden" alt="White">
+            <img src="pilotlights/flush/black.png" id="blackce" class="hidden" alt="Black">
+            <img src="pilotlights/flush/green.png" id="greence" class="hidden" alt="Green">
+            <img src="pilotlights/flush/red.png" id="redce" class="hidden" alt="Red">
+            <img src="pilotlights/flush/blue.png" id="bluece" class="hidden" alt="Blue">
+            <img src="pilotlights/flush/yellow.png" id="yellowce" class="hidden" alt="Yellow">
+            
+        </div>
+        <div id="plusSymbol" class="plus-symbol" style="display: none;">+</div>
+        
+            <div class="sevencode" style="display: flex;">
+                <div class="image-container" >
+                    <img src="monoblock/no-1.png" id="no-1" class="hidden" alt="White">
+                    <div class="image-name" id="onelable" style="display: none;">S1</div>
+                </div>
+       
+                <div id="plusSymbol2" class="plus-symbol" style="display: none;">+</div>
+
+                <div class="image-container" >
+                    <img src="monoblock/nc-1.png" id="nc-1" class="hidden" alt="Black">
+                    <div class="image-name" id="twolable" style="display: none;">S2</div>
+                </div>
+           
+            
+              
+            </div>
+        </div>
+            <script>
+     document.querySelectorAll('.seventhoptione').forEach(button => {
+    button.addEventListener('click', function () {
+        const color = this.getAttribute('gdata-colorc');
+        const codeclr = this.getAttribute('code-color');
+        const codeclr2 = this.getAttribute('code-color2');
+        const productCode = this.getAttribute('gdata-codec');
+        const noimage = this.getAttribute('noimg');
+
+        // Hide all images initially
+        document.querySelectorAll('.sevenhimg img, .sevencode img').forEach(img => img.classList.add('hidden'));
+        document.getElementById('plusSymbol').style.display = "none";
+        document.getElementById('plusSymbol2').style.display = "none";
+
+        // Hide all labels initially
+        document.getElementById('onelable').style.display = "none";
+        document.getElementById('twolable').style.display = "none";
+
+        // Show the primary color image
+        const selectedImage = document.getElementById(color);
+        if (selectedImage) {
+            selectedImage.classList.remove('hidden');
+        }
+
+        // Show the first code image and update label with noimage attribute
+        const selectedCodeImage = document.getElementById(codeclr);
+        if (selectedCodeImage) {
+            selectedCodeImage.classList.remove('hidden');
+            document.getElementById('plusSymbol').style.display = "block";
+
+            if (codeclr === "no-1") {
+                document.getElementById('onelable').style.display = "block";
+                document.getElementById('onelable').textContent = `S1${noimage ? '*' + noimage : ''}`;
+                document.getElementById('twolable').style.display = "none";
+            }
+
+            if (codeclr === "nc-1") {
+                document.getElementById('twolable').style.display = "block";
+                document.getElementById('twolable').textContent = `S2${noimage ? '*' + noimage : ''}`;
+                document.getElementById('onelable').style.display = "none";
+            }
+        }
+
+        // Show the second code image if present
+        if (codeclr2) {
+            const selectedCodeImage2 = document.getElementById(codeclr2);
+            if (selectedCodeImage2) {
+                selectedCodeImage2.classList.remove('hidden');
+                document.getElementById('plusSymbol2').style.display = "block";
+
+                if (codeclr2 === "nc-1") {
+                    document.getElementById('twolable').style.display = "block";
+                    document.getElementById('twolable').textContent = `S2${noimage ? '*' + noimage : ''}`;
+                }
+            }
+        }
+
+        // Display the product code
+        const productInfo = document.getElementById('generated-codec');
+        productInfo.textContent = "Product Code: " + productCode;
+        document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+    });
+});
+
+            </script>
+
+<div class="imagecon">
+    <div class="sevenhimga">
+
+        <img src="pilotlights/flush/white.png" id="whitecea" class="hidden" alt="White">
+        <img src="pilotlights/flush/black.png" id="blackcea" class="hidden" alt="Black">
+        <img src="pilotlights/flush/green.png" id="greencea" class="hidden" alt="Green">
+        <img src="pilotlights/flush/red.png" id="redcea" class="hidden" alt="Red">
+        <img src="pilotlights/flush/blue.png" id="bluecea" class="hidden" alt="Blue">
+        <img src="pilotlights/flush/yellow.png" id="yellowcea" class="hidden" alt="Yellow">
+        
+    </div>
+    <div id="plusSymbola" class="plus-symbol" style="display: none;">+</div>
+    
+        <div class="sevencodea" style="display: flex;">
+            <div class="image-container" >
+                <img src="monoblock/no-1.png" id="no-1a" class="hidden" alt="White">
+                <div class="image-name" id="onelablea" style="display: none;">S1</div>
+            </div>
+   
+            <div id="plusSymbol2a" class="plus-symbol" style="display: none;">+</div>
+
+            <div class="image-container" >
+                <img src="monoblock/nc-1.png" id="nc-1a" class="hidden" alt="Black">
+                <div class="image-name" id="twolablea" style="display: none;">S2</div>
+            </div>
+       
+        
+          
+        </div>
+    </div>
+
+
+<script>
+    document.querySelectorAll('.secondthoptione').forEach(button => {
+   button.addEventListener('click', function () {
+       const color = this.getAttribute('gdata-colorca');
+       const codeclr = this.getAttribute('code-colora');
+       const codeclr2 = this.getAttribute('code-color2a');
+       const productCode = this.getAttribute('gdata-codeca');
+       const noimage = this.getAttribute('noimga');
+
+       // Hide all images initially
+       document.querySelectorAll('.sevenhimga img, .sevencodea img').forEach(img => img.classList.add('hidden'));
+       document.getElementById('plusSymbola').style.display = "none";
+       document.getElementById('plusSymbol2a').style.display = "none";
+
+       // Hide all labels initially
+       document.getElementById('onelablea').style.display = "none";
+       document.getElementById('twolablea').style.display = "none";
+
+       // Show the primary color image
+       const selectedImage = document.getElementById(color);
+       if (selectedImage) {
+           selectedImage.classList.remove('hidden');
+       }
+
+       // Show the first code image and update label with noimage attribute
+       const selectedCodeImage = document.getElementById(codeclr);
+       if (selectedCodeImage) {
+           selectedCodeImage.classList.remove('hidden');
+           document.getElementById('plusSymbola').style.display = "block";
+
+           if (codeclr === "no-1a") {
+               document.getElementById('onelablea').style.display = "block";
+               document.getElementById('onelablea').textContent = `S1${noimage ? '*' + noimage : ''}`;
+               document.getElementById('twolablea').style.display = "none";
+           }
+
+           if (codeclr === "nc-1a") {
+               document.getElementById('twolablea').style.display = "block";
+               document.getElementById('twolablea').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               document.getElementById('onelablea').style.display = "none";
+           }
+       }
+
+       // Show the second code image if present
+       if (codeclr2) {
+           const selectedCodeImage2 = document.getElementById(codeclr2);
+           if (selectedCodeImage2) {
+               selectedCodeImage2.classList.remove('hidden');
+               document.getElementById('plusSymbol2a').style.display = "block";
+
+               if (codeclr2 === "nc-1a") {
+                   document.getElementById('twolablea').style.display = "block";
+                   document.getElementById('twolablea').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               }
+           }
+       }
+
+       // Display the product code
+       const productInfo = document.getElementById('generated-codec');
+       productInfo.textContent = "Product Code: " + productCode;
+       document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+   });
+});
+
+           </script>
+
+
+<div class="imagecon">
+    <div class="sevenhimgab">
+
+        <img src="pilotlights/flush/white.png" id="whiteceab" class="hidden" alt="White">
+        <img src="pilotlights/flush/black.png" id="blackceab" class="hidden" alt="Black">
+        <img src="pilotlights/flush/green.png" id="greenceab" class="hidden" alt="Green">
+        <img src="pilotlights/flush/red.png" id="redceab" class="hidden" alt="Red">
+        <img src="pilotlights/flush/blue.png" id="blueceab" class="hidden" alt="Blue">
+        <img src="pilotlights/flush/yellow.png" id="yellowceab" class="hidden" alt="Yellow">
+        
+    </div>
+    <div id="plusSymbolab" class="plus-symbol" style="display: none;">+</div>
+    
+        <div class="sevencodeab" style="display: flex;">
+            <div class="image-container" >
+                <img src="monoblock/no-1.png" id="no-1ab" class="hidden" alt="White">
+                <div class="image-name" id="onelableab" style="display: none;">S1</div>
+            </div>
+   
+            <div id="plusSymbol2ab" class="plus-symbol" style="display: none;">+</div>
+
+            <div class="image-container" >
+                <img src="monoblock/nc-1.png" id="nc-1ab" class="hidden" alt="Black">
+                <div class="image-name" id="twolableab" style="display: none;">S2</div>
+            </div>
+       
+        
+          
+        </div>
+    </div>
+
+
+<script>
+    document.querySelectorAll('.thirdthoptione').forEach(button => {
+   button.addEventListener('click', function () {
+       const color = this.getAttribute('gdata-colorcab');
+       const codeclr = this.getAttribute('code-colorab');
+       const codeclr2 = this.getAttribute('code-color2ab');
+       const productCode = this.getAttribute('gdata-codecab');
+       const noimage = this.getAttribute('noimgab');
+
+       // Hide all images initially
+       document.querySelectorAll('.sevenhimgab img, .sevencodeab img').forEach(img => img.classList.add('hidden'));
+       document.getElementById('plusSymbolab').style.display = "none";
+       document.getElementById('plusSymbol2ab').style.display = "none";
+
+       // Hide all labels initially
+       document.getElementById('onelableab').style.display = "none";
+       document.getElementById('twolableab').style.display = "none";
+
+       // Show the primary color image
+       const selectedImage = document.getElementById(color);
+       if (selectedImage) {
+           selectedImage.classList.remove('hidden');
+       }
+
+       // Show the first code image and update label with noimage attribute
+       const selectedCodeImage = document.getElementById(codeclr);
+       if (selectedCodeImage) {
+           selectedCodeImage.classList.remove('hidden');
+           document.getElementById('plusSymbolab').style.display = "block";
+
+           if (codeclr === "no-1ab") {
+               document.getElementById('onelableab').style.display = "block";
+               document.getElementById('onelableab').textContent = `S1${noimage ? '*' + noimage : ''}`;
+               document.getElementById('twolableab').style.display = "none";
+           }
+
+           if (codeclr === "nc-1ab") {
+               document.getElementById('twolableab').style.display = "block";
+               document.getElementById('twolableab').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               document.getElementById('onelableab').style.display = "none";
+           }
+       }
+
+       // Show the second code image if present
+       if (codeclr2) {
+           const selectedCodeImage2 = document.getElementById(codeclr2);
+           if (selectedCodeImage2) {
+               selectedCodeImage2.classList.remove('hidden');
+               document.getElementById('plusSymbol2ab').style.display = "block";
+
+               if (codeclr2 === "nc-1ab") {
+                   document.getElementById('twolableab').style.display = "block";
+                   document.getElementById('twolableab').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               }
+           }
+       }
+
+       // Display the product code
+       const productInfo = document.getElementById('generated-codec');
+       productInfo.textContent = "Product Code: " + productCode;
+       document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+   });
+});
+
+           </script>
+
+
+<div class="imagecon">
+    <div class="sevenhimgabc">
+
+        <img src="pilotlights/flush/white.png" id="whiteceabc" class="hidden" alt="White">
+        <img src="pilotlights/flush/black.png" id="blackceabc" class="hidden" alt="Black">
+        <img src="pilotlights/flush/green.png" id="greenceabc" class="hidden" alt="Green">
+        <img src="pilotlights/flush/red.png" id="redceabc" class="hidden" alt="Red">
+        <img src="pilotlights/flush/blue.png" id="blueceabc" class="hidden" alt="Blue">
+        <img src="pilotlights/flush/yellow.png" id="yellowceabc" class="hidden" alt="Yellow">
+        
+    </div>
+    <div id="plusSymbolabc" class="plus-symbol" style="display: none;">+</div>
+    
+        <div class="sevencodeabc" style="display: flex;">
+            <div class="image-container" >
+                <img src="monoblock/no-1.png" id="no-1abc" class="hidden" alt="White">
+                <div class="image-name" id="onelableabc" style="display: none;">S1</div>
+            </div>
+   
+            <div id="plusSymbol2abc" class="plus-symbol" style="display: none;">+</div>
+
+            <div class="image-container" >
+                <img src="monoblock/nc-1.png" id="nc-1abc" class="hidden" alt="Black">
+                <div class="image-name" id="twolableabc" style="display: none;">S2</div>
+            </div>
+       
+        
+          
+        </div>
+    </div>
+
+
+<script>
+    document.querySelectorAll('.fourththoptione').forEach(button => {
+   button.addEventListener('click', function () {
+       const color = this.getAttribute('gdata-colorcabc');
+       const codeclr = this.getAttribute('code-colorabc');
+       const codeclr2 = this.getAttribute('code-color2abc');
+       const productCode = this.getAttribute('gdata-codecabc');
+       const noimage = this.getAttribute('noimgabc');
+
+       // Hide all images initially
+       document.querySelectorAll('.sevenhimgabc img, .sevencodeabc img').forEach(img => img.classList.add('hidden'));
+       document.getElementById('plusSymbolabc').style.display = "none";
+       document.getElementById('plusSymbol2abc').style.display = "none";
+
+       // Hide all labels initially
+       document.getElementById('onelableabc').style.display = "none";
+       document.getElementById('twolableabc').style.display = "none";
+
+       // Show the primary color image
+       const selectedImage = document.getElementById(color);
+       if (selectedImage) {
+           selectedImage.classList.remove('hidden');
+       }
+
+       // Show the first code image and update label with noimage attribute
+       const selectedCodeImage = document.getElementById(codeclr);
+       if (selectedCodeImage) {
+           selectedCodeImage.classList.remove('hidden');
+           document.getElementById('plusSymbolabc').style.display = "block";
+
+           if (codeclr === "no-1abc") {
+               document.getElementById('onelableabc').style.display = "block";
+               document.getElementById('onelableabc').textContent = `S1${noimage ? '*' + noimage : ''}`;
+               document.getElementById('twolableabc').style.display = "none";
+           }
+
+           if (codeclr === "nc-1abc") {
+               document.getElementById('twolableabc').style.display = "block";
+               document.getElementById('twolableabc').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               document.getElementById('onelableabc').style.display = "none";
+           }
+       }
+
+       // Show the second code image if present
+       if (codeclr2) {
+           const selectedCodeImage2 = document.getElementById(codeclr2);
+           if (selectedCodeImage2) {
+               selectedCodeImage2.classList.remove('hidden');
+               document.getElementById('plusSymbol2abc').style.display = "block";
+
+               if (codeclr2 === "nc-1abc") {
+                   document.getElementById('twolableabc').style.display = "block";
+                   document.getElementById('twolableabc').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               }
+           }
+       }
+
+       // Display the product code
+       const productInfo = document.getElementById('generated-codec');
+       productInfo.textContent = "Product Code: " + productCode;
+       document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+   });
+});
+
+           </script>
+
+<div class="imagecon">
+    <div class="sevenhimgabcd">
+
+        <img src="pilotlights/flush/white.png" id="whiteceabcd" class="hidden" alt="White">
+        <img src="pilotlights/flush/black.png" id="blackceabcd" class="hidden" alt="Black">
+        <img src="pilotlights/flush/green.png" id="greenceabcd" class="hidden" alt="Green">
+        <img src="pilotlights/flush/red.png" id="redceabcd" class="hidden" alt="Red">
+        <img src="pilotlights/flush/blue.png" id="blueceabcd" class="hidden" alt="Blue">
+        <img src="pilotlights/flush/yellow.png" id="yellowceabcd" class="hidden" alt="Yellow">
+        
+    </div>
+    <div id="plusSymbolabcd" class="plus-symbol" style="display: none;">+</div>
+    
+        <div class="sevencodeabcd" style="display: flex;">
+            <div class="image-container" >
+                <img src="monoblock/no-1.png" id="no-1abcd" class="hidden" alt="White">
+                <div class="image-name" id="onelableabcd" style="display: none;">S1</div>
+            </div>
+   
+            <div id="plusSymbol2abcd" class="plus-symbol" style="display: none;">+</div>
+
+            <div class="image-container" >
+                <img src="monoblock/nc-1.png" id="nc-1abcd" class="hidden" alt="Black">
+                <div class="image-name" id="twolableabcd" style="display: none;">S2</div>
+            </div>
+       
+        
+          
+        </div>
+    </div>
+
+
+<script>
+    document.querySelectorAll('.fithoptione').forEach(button => {
+   button.addEventListener('click', function () {
+       const color = this.getAttribute('gdata-colorcabcd');
+       const codeclr = this.getAttribute('code-colorabcd');
+       const codeclr2 = this.getAttribute('code-color2abcd');
+       const productCode = this.getAttribute('gdata-codecabcd');
+       const noimage = this.getAttribute('noimgabcd');
+
+       // Hide all images initially
+       document.querySelectorAll('.sevenhimgabcd img, .sevencodeabcd img').forEach(img => img.classList.add('hidden'));
+       document.getElementById('plusSymbolabcd').style.display = "none";
+       document.getElementById('plusSymbol2abcd').style.display = "none";
+
+       // Hide all labels initially
+       document.getElementById('onelableabcd').style.display = "none";
+       document.getElementById('twolableabcd').style.display = "none";
+
+       // Show the primary color image
+       const selectedImage = document.getElementById(color);
+       if (selectedImage) {
+           selectedImage.classList.remove('hidden');
+       }
+
+       // Show the first code image and update label with noimage attribute
+       const selectedCodeImage = document.getElementById(codeclr);
+       if (selectedCodeImage) {
+           selectedCodeImage.classList.remove('hidden');
+           document.getElementById('plusSymbolabcd').style.display = "block";
+
+           if (codeclr === "no-1abcd") {
+               document.getElementById('onelableabcd').style.display = "block";
+               document.getElementById('onelableabcd').textContent = `S1${noimage ? '*' + noimage : ''}`;
+               document.getElementById('twolableabcd').style.display = "none";
+           }
+
+           if (codeclr === "nc-1abcd") {
+               document.getElementById('twolableabcd').style.display = "block";
+               document.getElementById('twolableabcd').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               document.getElementById('onelableabcd').style.display = "none";
+           }
+       }
+
+       // Show the second code image if present
+       if (codeclr2) {
+           const selectedCodeImage2 = document.getElementById(codeclr2);
+           if (selectedCodeImage2) {
+               selectedCodeImage2.classList.remove('hidden');
+               document.getElementById('plusSymbol2abcd').style.display = "block";
+
+               if (codeclr2 === "nc-1abcd") {
+                   document.getElementById('twolableabcd').style.display = "block";
+                   document.getElementById('twolableabcd').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               }
+           }
+       }
+
+       // Display the product code
+       const productInfo = document.getElementById('generated-codec');
+       productInfo.textContent = "Product Code: " + productCode;
+       document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+   });
+});
+
+           </script>
+
+<div class="imagecon">
+    <div class="sevenhimgabcde">
+
+        <img src="pilotlights/flush/white.png" id="whiteceabcde" class="hidden" alt="White">
+        <img src="pilotlights/flush/black.png" id="blackceabcde" class="hidden" alt="Black">
+        <img src="pilotlights/flush/green.png" id="greenceabcde" class="hidden" alt="Green">
+        <img src="pilotlights/flush/red.png" id="redceabcde" class="hidden" alt="Red">
+        <img src="pilotlights/flush/blue.png" id="blueceabcde" class="hidden" alt="Blue">
+        <img src="pilotlights/flush/yellow.png" id="yellowceabcde" class="hidden" alt="Yellow">
+        
+    </div>
+    <div id="plusSymbolabcde" class="plus-symbol" style="display: none;">+</div>
+    
+        <div class="sevencodeabcde" style="display: flex;">
+            <div class="image-container" >
+                <img src="monoblock/no-1.png" id="no-1abcde" class="hidden" alt="White">
+                <div class="image-name" id="onelableabcde" style="display: none;">S1</div>
+            </div>
+   
+            <div id="plusSymbol2abcde" class="plus-symbol" style="display: none;">+</div>
+
+            <div class="image-container" >
+                <img src="monoblock/nc-1.png" id="nc-1abcde" class="hidden" alt="Black">
+                <div class="image-name" id="twolableabcde" style="display: none;">S2</div>
+            </div>
+       
+        
+          
+        </div>
+    </div>
+
+
+<script>
+    document.querySelectorAll('.sixthoptione').forEach(button => {
+   button.addEventListener('click', function () {
+       const color = this.getAttribute('gdata-colorcabcde');
+       const codeclr = this.getAttribute('code-colorabcde');
+       const codeclr2 = this.getAttribute('code-color2abcde');
+       const productCode = this.getAttribute('gdata-codecabcde');
+       const noimage = this.getAttribute('noimgabcde');
+
+       // Hide all images initially
+       document.querySelectorAll('.sevenhimgabcde img, .sevencodeabcde img').forEach(img => img.classList.add('hidden'));
+       document.getElementById('plusSymbolabcde').style.display = "none";
+       document.getElementById('plusSymbol2abcde').style.display = "none";
+
+       // Hide all labels initially
+       document.getElementById('onelableabcde').style.display = "none";
+       document.getElementById('twolableabcde').style.display = "none";
+
+       // Show the primary color image
+       const selectedImage = document.getElementById(color);
+       if (selectedImage) {
+           selectedImage.classList.remove('hidden');
+       }
+
+       // Show the first code image and update label with noimage attribute
+       const selectedCodeImage = document.getElementById(codeclr);
+       if (selectedCodeImage) {
+           selectedCodeImage.classList.remove('hidden');
+           document.getElementById('plusSymbolabcde').style.display = "block";
+
+           if (codeclr === "no-1abcde") {
+               document.getElementById('onelableabcde').style.display = "block";
+               document.getElementById('onelableabcde').textContent = `S1${noimage ? '*' + noimage : ''}`;
+               document.getElementById('twolableabcde').style.display = "none";
+           }
+
+           if (codeclr === "nc-1abcde") {
+               document.getElementById('twolableabcde').style.display = "block";
+               document.getElementById('twolableabcde').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               document.getElementById('onelableabcde').style.display = "none";
+           }
+       }
+
+       // Show the second code image if present
+       if (codeclr2) {
+           const selectedCodeImage2 = document.getElementById(codeclr2);
+           if (selectedCodeImage2) {
+               selectedCodeImage2.classList.remove('hidden');
+               document.getElementById('plusSymbol2abcde').style.display = "block";
+
+               if (codeclr2 === "nc-1abcde") {
+                   document.getElementById('twolableabcde').style.display = "block";
+                   document.getElementById('twolableabcde').textContent = `S2${noimage ? '*' + noimage : ''}`;
+               }
+           }
+       }
+
+       // Display the product code
+       const productInfo = document.getElementById('generated-codec');
+       productInfo.textContent = "Product Code: " + productCode;
+       document.getElementById("resultc").classList.remove("hidden"); // Make result visible
+   });
+});
+
+           </script>
+
+
+
+
+
+         </div>
+         
+        </div>
+        
+</body>
+</html>
