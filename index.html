@@ -41,7 +41,7 @@
         <div class="fourbtn">
             <button class="grid-item main-btn">CAM Switches</button>
             <button class="grid-item main-btn">Conduit</button>
-            <button class="grid-item main-btn">Potentiometer</button>
+            <button class="grid-item main-btn" onclick="joycontent()">Joystick</button>
             <button class="grid-item main-btn">Plugs & Socket</button>
         </div>
         </div>
@@ -79,6 +79,17 @@ function pilotcontent() {
 // third model
 function monocontent() {
             fetch('monoblock/monoblock.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('options-container').innerHTML = data;
+                    executeScripts();
+                })
+                .catch(error => console.error('Error fetching content:', error));
+        }
+
+        // fourth model
+function joycontent() {
+            fetch('joystick/joystick.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('options-container').innerHTML = data;
